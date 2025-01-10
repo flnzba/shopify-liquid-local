@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h1>Welcome to {{ site_name }}</h1>
+    {% if products.size > 0 %}
+      <ul>
+        {% for product in products %}
+          <li>{{ product.name }} - {{ product.price }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No products available.</p>
+    {% endif %}
+  </body>
+</html>
